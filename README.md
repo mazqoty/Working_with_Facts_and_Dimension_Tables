@@ -64,3 +64,10 @@ We need to design a data warehouse that can support the queries listed below:
 Here are five rows picked at random from the csv file.
 
 ![alt text](https://i.imgur.com/YC55fj7.png)
+
+#### Exercise 2 - Design the fact tables
+
+The fact in this data is the bill which is generated monthly.
+The fields ```customerid``` and ```billedamount``` are the important fields in the fact table.
+We also need a way to identify the additional customer information, other than the id, and date information. So we need fields that refer to the customer and date information in other tables.
+The final fact table for the bill would look like this:
