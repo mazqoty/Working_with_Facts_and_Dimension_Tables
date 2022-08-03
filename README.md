@@ -1,5 +1,4 @@
 # Working with Facts and Dimension Tables
-=========================================
 
 In this lab you will:
 
@@ -93,3 +92,93 @@ The final fact table for the bill would look like this:
     <td>Amount charged by the cloud services provided for that month in USD</td>
   </tr>
 </table>
+
+#### Exercise 3 - Design the dimension tables
+There are two dimensions to our fact(monthly bill).
+1. Customer information
+2. Date information
+Let us organize all the fields that give information about the customer into a dimension table.
+<table style="width:100%">
+  <tr>
+    <td>Field Name</td>
+    <td>Details</td>
+  </tr>
+  <tr>
+    <td>customerid</td>
+    <td>Primary Key - Id of the customer</td>
+  </tr>
+  <tr>
+    <td>category</td>
+    <td>Category of the customer. Example: Individual or Company</td>
+  </tr>
+  <tr>
+    <td>country</td>
+    <td>Country of the customer</td>
+  </tr>
+  <tr>
+    <td>industry</td>
+    <td>Which domain/industry the customer belongs to. Example: Legal, Engineering</td>
+  </tr>
+</table>
+
+Let us organize or derive all the fields that give information about the date of the bill.
+
+<table style="width:100%">
+  <tr>
+    <td>Field Name</td>
+    <td>Details</td>
+  </tr>
+  <tr>
+    <td>monthid</td>
+    <td>Primary Key - Id of the month</td>
+  </tr>
+  <tr>
+    <td>year</td>
+    <td>Year derived from the month field of the original data. Example: 2010</td>
+  </tr>
+  <tr>
+    <td>month</td>
+    <td>Month number derived from the month field of the original data. Example: 1, 2, 3</td>
+  </tr>
+  <tr>
+    <td>monthname</td>
+    <td>Month name derived from the month field of the original data. Example: March</td>
+  </tr>
+   <tr>
+    <td>quarter</td>
+    <td>Quarter number derived from the month field of the original data. Example: 1, 2, 3, 4</td>
+  </tr>
+   <tr>
+    <td>quartername</td>
+    <td>Quarter name derived from the month field of the original data. Example: Q1, Q2, Q3, Q4</td>
+  </tr>
+</table>
+
+#### Exercise 4 - Create a star schema using the fact and dimension tables
+Based on the previous two exercises, we have now arrived at 3 tables, we can name them as in the table below.
+Table Name	Type
+<table style="width:100%">
+  <tr>
+    <td>Table Name</td>
+    <td>Type<td>
+    <td>Details</td>
+  </tr>
+  <tr>
+    <td>FactBilling</td>
+    <td>Fact<td>
+    <td>This table contains the billing amount, and the foreign keys to customer and month data</td>
+  </tr>
+  <tr>
+    <td>DimCustomer</td>
+    <td>Dimension</td>
+    <td>This table contains all the information related the customer<td>
+  </tr>
+  <tr>
+    <td>DimMonth</td>
+    <td>Dimension<td>
+    <td>	This table contains all the information related the month of billing</td>
+  </tr>
+ </table>
+ When we arrange the above tables in Star Schema style, we get a table strucutre that looks likes the one in the image below.
+ ![](https://i.imgur.com/lvTBCgI.jpg)
+ 
