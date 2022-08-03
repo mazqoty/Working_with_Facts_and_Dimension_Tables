@@ -181,5 +181,8 @@ Table Name	Type
  </table>
  When we arrange the above tables in Star Schema style, we get a table strucutre that looks likes the one in the image below.
  
+ 
  ![alt_text](https://i.imgur.com/lvTBCgI.jpg)
+ 
+ The image shows the fact and dimension tables along with the relaionships between them.
  
