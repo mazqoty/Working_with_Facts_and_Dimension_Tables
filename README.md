@@ -20,30 +20,47 @@ Here are the field wise details of the billing data.
     <td>Details</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
+    <td>customerid</td>
+    <td>Id of the customer</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
+    <td>category</td>
+    <td>Category of the customer. Example: Individual or Company</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
+    <td>country</td>
+    <td>Country of the customer</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
+    <td>industry</td>
+    <td>Which domain/industry the customer belongs to. Example: Legal, Engineering</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
+    <td>month</td>
+    <td>The billed month, stored as YYYY-MM. Example: 2009-01 refers to the month January in the year 2009</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
+    <td>billedamount</td>
+    <td>Amount charged by the cloud services provided for that month in USD</td>
   </tr>
 </table>
 
+We need to design a data warehouse that can support the queries listed below:
 
+- average billing per customer
+- billing by country
+- top 10 customers
+- top 10 countries
+- billing by industry
+- billing by category
+- billing by year
+- billing by month
+- billing by quarter
+- average billing per industry per month
+- average billing per industry per quarter
+- average billing per country per quarter
+- average billing per country per industry per quarter
 
+Here are five rows picked at random from the csv file.
+
+![alt text](https://i.imgur.com/YC55fj7.png)
