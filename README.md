@@ -186,37 +186,27 @@ Table Name	Type
  
  The image shows the fact and dimension tables along with the relaionships between them.
  
- Step 1: Start the postgresql server.
+ Step 1: Start the mySQL server and go to Shell.
+ 
+ ```sudo service mysql start```
+ ``` mysql -u root -p``` or ``` mysql -u root```
  
  Step 2: Create the database on the data warehouse.
  
- Using the createdb command of the PostgreSQL server, we can directly create the database from the terminal.
+ Using the create database command of the mySQL server
  
  Run the command below to create a database named billingDW.
  
- ```createdb -h localhost -U postgres -p 5432 billingDW```
- 
- In the above command
- 
-  -h mentions that the database server is running on the localhost
-  
-  -U mentions that we are using the user name postgres to log into the database
-  
-  -p mentions that the database server is running on port number 5432
+ ```create database billingDW;```
  
  Step 3: Download the schema .sql file.
  
  Download the file by running the command below.
  
- ```wget https://github.com/mazqoty/Working_with_Facts_and_Dimension_Tables/blob/main/postgresql_Star-Schema_Script.sql```
+ ```wget https://raw.githubusercontent.com/mazqoty/Working_with_Facts_and_Dimension_Tables/main/mySQL_Create_Star-Schema_Script.sql```
  
  Step 4: Create the schema
  
  Run the command below to create the schema in the under ```billingDW``` database.
  
- ```psql  -h localhost -U postgres -p 5432 billingDW < postgresql_Star-Schema_Script.sql```
- 
- You should see an ouput similar to the one below.
- 
- ![alt_text]()
- 
+ ```mysql -u root -P 3306 -D billingDW < mySQL_Create_Star-Schema_Script.sql```
