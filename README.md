@@ -180,5 +180,6 @@ Table Name	Type
   </tr>
  </table>
  When we arrange the above tables in Star Schema style, we get a table strucutre that looks likes the one in the image below.
+ 
  ![alt_text](https://i.imgur.com/lvTBCgI.jpg)
  
