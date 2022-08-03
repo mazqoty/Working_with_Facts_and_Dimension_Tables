@@ -208,13 +208,13 @@ Table Name	Type
  
  Download the file by running the command below.
  
- ```code here```
+ ```wget https://github.com/mazqoty/Working_with_Facts_and_Dimension_Tables/blob/main/postgresql_Star-Schema_Script.sql```
  
  Step 4: Create the schema
  
  Run the command below to create the schema in the under ```billingDW``` database.
  
- ```psql  -h localhost -U postgres -p 5432 billingDW < star-schema.sql```
+ ```psql  -h localhost -U postgres -p 5432 billingDW < postgresql_Star-Schema_Script.sql```
  
  You should see an ouput similar to the one below.
  
