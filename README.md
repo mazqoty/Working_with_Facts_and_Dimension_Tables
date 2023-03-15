@@ -203,7 +203,7 @@ Table Name	Type
  
  Download the file by running the command below.
  
- ```wget https://raw.githubusercontent.com/mazqoty/Working_with_Facts_and_Dimension_Tables/main/mySQL_Create_Star-Schema_Script.sql```
+ ```wget https://raw.githubusercontent.com/mm-mazhar/Working_with_Facts_and_Dimension_Tables/main/mySQL_Create_Star-Schema_Script.sql```
  
  Step 4: Create the schema
  
